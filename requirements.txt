@@ -1,0 +1,7 @@
+opencv-python
+numpy
+imutils
+SpeechRecognition
+pyaudio
+gTTS
+playsound==1.2.2
