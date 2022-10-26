@@ -28,12 +28,8 @@ while True:
         break
     for (x1, y1, x2, y2), face in face_det.get_face(frame):
         cv2.imshow('cc', face)
-        # pred = mask_det.predict(face)
-        # if pred:
-        #     print('không')
-        #     cv2.rectangle(frame, (x1, y1), (x2, y2), (0, 0, 255), 2)
-        # else:
         cv2.rectangle(frame, (x1, y1), (x2, y2), (0, 255, 0), 2)
+        cv2.circle(frame, ((x1+x2)//2,(y1+y2)//2), 5, (0, 255, 0), -1)
     cv2.putText(frame, f'FPS: {fps}', (10,30), cv2.FONT_HERSHEY_SIMPLEX, 1, (255,0,0),2)
     cv2.imshow('cam', frame)
     if cv2.waitKey(1) & 0xFF == ord('q'):

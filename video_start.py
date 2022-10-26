@@ -61,5 +61,8 @@ class Start_Video:
 
             # cv2.setMouseCallback('Intrusion Warning', handle_left_click, points)
 
-        self.video.stop()
+        # self.video.stop()
         cv2.destroyAllWindows()
+
+    def reset(self):
+        self.model.reset()

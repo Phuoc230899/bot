@@ -12,6 +12,9 @@ start = Start_Video()
 
 def get_start():
     start.main()
+
+def reset():
+    start.reset()
 # exit button
 start_button = ttk.Button(
     root,
@@ -25,4 +28,15 @@ start_button.pack(
     expand=True
 )
 
+reset_button = ttk.Button(
+    root,
+    text='Reset',
+    command=lambda: reset()
+)
+
+reset_button.pack(
+    ipadx=5,
+    ipady=5,
+    expand=True
+)
 root.mainloop()
